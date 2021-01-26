@@ -8,6 +8,7 @@
     
   } 
  
+  /* product images  */
   img {
 	max-width: 100%;
 	height: auto;
@@ -22,20 +23,21 @@
 
  
   
-
+/*  Filters  */
 .filters{
-    font-size: 14px;
-    text-align: left; 
+    font-size: 15px;
+    text-align: center; 
     margin: 20px;
-    }
+    
+}
 .filters fieldset{
     text-align: center;
-    width: 100%;
+    width: 50%;
     position:relative;
-    font-size: 11px;
+    font-size: 15px;
     padding: 5px;
-    display: flex;
-  justify-content: center;
+    display: inline-block;
+  justify-content: left;
   
 }
 .filters li{
@@ -43,43 +45,40 @@
     display: inline;
     list-style: none;
 }
+
+
+/*  Results section */
 .results dd{
-    font-size: smaller;
+    font: size 100px;;
 }
 .results{
     display:grid;
     grid-template-columns: repeat(auto-fit, 20rem);
-    justify-content: center;
+    justify-content:center;
 }
 .results button{
     display: inline-flexbox;
     border: none;
     padding: 1rem 2rem;
     margin: ;
-    text-decoration: none;
     background: white;
     color: #000000;
     font-family: sans-serif;
     font-size: 1rem;
     cursor: pointer;
     text-align: center;
-    
-    -webkit-appearance: none;
-    -moz-appearance: none;
 }
 
-.results button:hover,
-button:focus {
-    background: rgb(230, 230, 230);
+.results button:hover{
+    background: red;
 }
 
-
+/*  Products */
 .product{
    
    
     height: 60vh;
-    overflow: hidden;
-    box-shadow: 0px 2px 8px 0px var(--clr-gray-light);
+    overflow:hidden;
     background-color: white;
     text-align: center;
     border-radius: 1rem;
@@ -93,11 +92,11 @@ button:focus {
    
 }
 .product_info{
-    font-size: 11px;
+    font-size: 12px;
 }
 
 .product_footer{
-    margin:10px 0;
+    margin:15px 0;
 }
 .product_footer button{
     height: 28px;
@@ -106,39 +105,17 @@ button:focus {
     padding-bottom: 20px;
     
 }
-.filters{
-    font-size: 14px;
-    text-align: left; 
-    margin: 20px;
-    
-}
-.filters fieldset{
-    text-align: left;
-    width: 100%;
-    position:relative;
-    font-size: 15px;
-    padding: 5px;
-    display: flex;
-  justify-content: center;
-  
-}
-.filters li{
-   
-    display: inline;
-    list-style: none;
-}
 
-.subheading{
-    text-align: center;
-}
+
+/* page number */
 .pagination{
     background: #f2f2f2;
     text-align: center;
+    display: inline;
 
 }
-
 .pagination li{
-    display: inline-block;
-    list-style: none;
-    text-align: center;
+    display: inline;
 }
+
+

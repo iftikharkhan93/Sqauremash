@@ -34,7 +34,7 @@ footer{
 }
 
 .box .content{
-  margin: 20px 0 0 0;
+  margin: 0 0 0 0;
   position: relative;
 }
 .box .content:before{
@@ -50,7 +50,7 @@ footer{
   text-align: justify;
 }
 .left .content .social{
-  margin: 20px 0 0 0;
+  margin: 0x 0 0 0;
 }
 .left .content .social a{
   padding: 0 2px;
