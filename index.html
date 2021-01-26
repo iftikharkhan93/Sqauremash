@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    
+    <title>SquareMash ▣</title>
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/reset.css">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  </head>
+  <body>
+    <nav>
+      <div class="menu-icon">
+<span class="fas fa-bars" style="color: white;"></span></div>
+<div class="logo">
+    SquareMash ▣</div>
+<div class="nav-items">
+<li><a href="#">Home</a></li>
+<li><a href="#">Men</a></li>
+<li><a href="#">Women</a></li>
+<li><a href="#">About</a></li>
+<li><a href="#">Contact Us</a></li>
+<li><a href="#"><i class="fa fa-heart" style="font-size:24px;color: white"></i></a> </li>
+<li><a href="#"><i class="fa fa-shopping-cart" style="font-size:24px;color:white"></i></a> </li>
+
+</div>
+<div class="search-icon">
+<span class="fas fa-search" style="color: white;"></span></div>
+<div class="cancel-icon">
+<span class="fas fa-times" style="color: white;"></span></div>
+<form action="#">
+        <input type="search" class="search-data" placeholder="Search" required>
+        <button type="submit" class="fas fa-search"></button>
+      </form>
+</nav>
+    
+</div>
+<script>
+    const menuBtn = document.querySelector(".menu-icon span");
+    const searchBtn = document.querySelector(".search-icon");
+    const cancelBtn = document.querySelector(".cancel-icon");
+    const items = document.querySelector(".nav-items");
+    const form = document.querySelector("form");
+    menuBtn.onclick = ()=>{
+      items.classList.add("active");
+      menuBtn.classList.add("hide");
+      searchBtn.classList.add("hide");
+      cancelBtn.classList.add("show");
+    }
+    cancelBtn.onclick = ()=>{
+      items.classList.remove("active");
+      menuBtn.classList.remove("hide");
+      searchBtn.classList.remove("hide");
+      cancelBtn.classList.remove("show");
+      form.classList.remove("active");
+      cancelBtn.style.color = "#ff3d00";
+    }
+    searchBtn.onclick = ()=>{
+      form.classList.add("active");
+      searchBtn.classList.add("hide");
+      cancelBtn.classList.add("show");
+    }
+  </script>
+
+
+<!-- Additional links -->
+<ul class="your-products">
+        
+</ul>
+</header>
+
+<main class="products">
+<header class="heading">
+  <h1>Sale on Clothing</h1>
+</header>
+
+<!-- Filtering product form -->
+<form class="filters">
+  <h2>Filters</h2><br>
+
+  <div class="filter-options">
+    <fieldset>
+      <legend><h3>Colour</h3></legend>
+      <ul class="filter-list">
+        <li><input type="checkbox" name="colour" value="black" id="black"> <label for="black">Black</label></li>
+        <li><input type="checkbox" name="colour" value="white" id="white"> <label for="white">White</label></li>
+        <li><input type="checkbox" name="colour" value="grey" id="grey"> <label for="grey">Grey</label></li>
+        <li><input type="checkbox" name="colour" value="red" id="red"> <label for="red">Red</label></li>
+        <li><input type="checkbox" name="colour" value="blue" id="blue"> <label for="blue">Blue</label></li>
+      </ul>
+    </fieldset>
+    <fieldset>
+      <legend><h3>Sizes</h3></legend>
+      <ol class="filter-list">
+        <li><input type="checkbox" name="size" value="xs" id="xs"> <label for="xs">XS</label></li>
+        <li><input type="checkbox" name="size" value="sm" id="sm"> <label for="sm">S</label></li>
+        <li><input type="checkbox" name="size" value="md" id="md"> <label for="md">M</label></li>
+        <li><input type="checkbox" name="size" value="lg" id="lg"> <label for="lg">L</label></li>
+        <li><input type="checkbox" name="size" value="xl" id="xl"> <label for="xl">XL</label></li>
+      </ol>
+    </fieldset>
+    <fieldset>
+      <legend><h3>Ratings (above)</h3></legend>
+      <ol class="filter-list">
+        <li>
+          <input type="radio" name="rating" value="4" id="aboveFour">
+          <label for="aboveFour">
+            <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_border</span>
+          </label>
+        </li>
+        <li>
+          <input type="radio" name="rating" value="3" id="aboveThree">
+          <label for="aboveThree">
+            <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_border</span><span class="material-icons">star_border</span>
+          </label>
+        </li>
+        <li>
+          <input type="radio" name="rating" value="2" id="aboveTwo">
+          <label for="aboveTwo">
+            <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_border</span><span class="material-icons">star_border</span><span class="material-icons">star_border</span>
+          </label>
+        </li>
+        <li>
+          <input type="radio" name="rating" value="1" id="aboveOne">
+          <label for="aboveOne">
+            <span class="material-icons">star</span><span class="material-icons">star_border</span><span class="material-icons">star_border</span><span class="material-icons">star_border</span><span class="material-icons">star_border</span>
+          </label>
+        </li>
+      </ol>
+    </fieldset>
+  </div>
+  <fieldset>
+    <legend><h3>Sort By</h3></legend>
+    <select name="sort" id="sort">
+        <option value="price-high">Featured</option>
+      <option value="price-high">Highest to Lowest</option>
+      <option value="price-low">owest to Highest</option>
+      <option value="newest">Newest releases</option>
+    </select>
+  </fieldset>
+</form>
+<h2 class="subheading">Results</h2>
+<section class="results">
+  
+  
+  <!-- Product 1 -->
+  <box>
+  <article class="product">
+    <header>
+      <img src="img/Prod-1.jpg" alt="Product Image">
+      <h3>Men's Hoodie</h3>
+      <data value="39"><del>$50.00</del> <ins>$39.00</ins></data>
+      <p>Here is a shot of this product ...</p>
+      <dl>
+        
+        <dd>4.4 <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_half</span></dd>
+      </dl>
+      <a href="#">see more</a>
+    </header>
+    <form>
+      <fieldset class="product_info">
+        <legend>Colours</legend>
+        <ul>
+          <li><label><input type="radio" name="colour" value="r"> Red</label></li>
+          <li><label><input type="radio" name="colour" value="w"> White</label></li>
+          <li><label><input type="radio" name="colour" value="b"> Blue</label></li>
+        </ul>
+      </fieldset>
+      <fieldset class="product_info">
+        <legend>Sizes</legend>
+        <ol>
+          <li><label><input type="radio" name="size" value="m"> M</label></li>
+          <li><label><input type="radio" name="size" value="l"> L</label></li>
+          <li><label><input type="radio" name="size" value="xl"> XL</label></li>
+        </ol>
+      </fieldset>
+    </form>
+    <footer class="product_footer">
+        <button style="font-size:10.5px"><i class="fa fa-shopping-cart"></i></button>
+        <button style="font-size:10.5px"><i class="fa fa-heart"></i></button>
+    </footer>
+  </article>
+
+  <!-- Product 2 -->
+  <article class="product">
+    <header>
+      <img src="img/prod-2.jpg" alt="Product Image">
+      <h3>Men's Shoe</h3>
+      <data value="40"><del>$60.00</del> <ins>$39.00</ins></data>
+      <p>Here is a shot of this product..</p>
+      <dl>
+        
+        <dd>4.4 <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_half</span></dd>
+      </dl>
+      <a href="#">see more</a>
+    </header>
+    <form>
+      <fieldset class="product_info">
+        <legend>Colours</legend>
+        <ul>
+          <li><label><input type="radio" name="colour" value="r"> Red</label></li>
+          <li><label><input type="radio" name="colour" value="w"> White</label></li>
+          <li><label><input type="radio" name="colour" value="b"> Blue</label></li>
+        </ul>
+      </fieldset>
+      <fieldset class="product_info">
+        <legend>Sizes</legend>
+        <ol>
+          <li><label><input type="radio" name="size" value="m"> M</label></li>
+          <li><label><input type="radio" name="size" value="l"> L</label></li>
+          <li><label><input type="radio" name="size" value="xl"> XL</label></li>
+        </ol>
+      </fieldset>
+    </form>
+    <footer class="product_footer">
+        <button style="font-size:10.5px"><i class="fa fa-shopping-cart"></i></button>
+        <button style="font-size:10.5px"><i class="fa fa-heart"></i></button>
+    </footer>
+  </article>
+</box>
+<box>
+  <!-- Product 3 -->
+  <article class="product">
+    <header>
+      <img src="img/Prod-3.jpg" alt="Product Image">
+      <h3>White Shoe</h3>
+      <data value="40"><del>$50.00</del> <ins>$39.00</ins></data>
+      <p>Here is a shot of this product ...</p>
+      <dl>
+       
+        <dd>4.4 <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_half</span></dd>
+      </dl>
+      <a href="#">see more</a>
+    </header>
+    <form>
+      <fieldset class="product_info">
+        <legend>Colours</legend>
+        <ul>
+          <li><label><input type="radio" name="colour" value="r"> Red</label></li>
+          <li><label><input type="radio" name="colour" value="w"> White</label></li>
+          <li><label><input type="radio" name="colour" value="b"> Blue</label></li>
+        </ul>
+      </fieldset>
+      <fieldset class="product_info">
+        <legend>Sizes</legend>
+        <ol>
+          <li><label><input type="radio" name="size" value="m"> M</label></li>
+          <li><label><input type="radio" name="size" value="l"> L</label></li>
+          <li><label><input type="radio" name="size" value="xl"> XL</label></li>
+        </ol>
+      </fieldset class="product_info">
+    </form>
+    <footer class="product_footer">
+        <button style="font-size:10.5px"><i class="fa fa-shopping-cart"></i></button>
+        <button style="font-size:10.5px"><i class="fa fa-heart"></i></button>
+    </footer>
+  </article>
+
+  <!-- Product 4 -->
+  <article class="product">
+    <header>
+      <img src="img/Prod-4.jpg" alt="Product Image">
+      <h3>Women's Sportswear</h3>
+      <data value="25"><del>$40.00</del> <ins>$39.00</ins></data>
+      <p>Here is a shot of this product..</p>
+      <dl>
+        
+        <dd>4.4 <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_half</span></dd>
+      </dl>
+      <a href="#">see more</a>
+    </header>
+    <form>
+      <fieldset class="product_info">
+        <legend>Colours</legend>
+        <ul>
+          <li><label><input type="radio" name="colour" value="r"> Red</label></li>
+          <li><label><input type="radio" name="colour" value="w"> White</label></li>
+          <li><label><input type="radio" name="colour" value="b"> Blue</label></li>
+        </ul>
+      </fieldset>
+      <fieldset class="product_info">
+        <legend>Sizes</legend>
+        <ol>
+          <li><label><input type="radio" name="size" value="m"> M</label></li>
+          <li><label><input type="radio" name="size" value="l"> L</label></li>
+          <li><label><input type="radio" name="size" value="xl"> XL</label></li>
+        </ol>
+      </fieldset>
+    </form>
+    <footer class="product_footer">
+        <button style="font-size:10.5px"><i class="fa fa-shopping-cart"></i></button>
+        <button style="font-size:10.5px"><i class="fa fa-heart"></i></button>
+    </footer>
+  </article>
+</box>
+<box>
+  <!-- Product 5 -->
+  <article class="product">
+    <header>
+      <img src="img/prod-5.jpg" alt="Product Image">
+      <h3>Women's Bag</h3>
+      <data value="30"><del>$60.00</del> <ins>$39.00</ins></data>
+      <p>Here is a shot of this product ...</p>
+      <dl>
+        
+        <dd>4.4 <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_half</span></dd>
+      </dl>
+      <a href="#">see more</a>
+    </header>
+    <form>
+      <fieldset class="product_info">
+        <legend>Colours</legend>
+        <ul>
+          <li><label><input type="radio" name="colour" value="r"> Red</label></li>
+          <li><label><input type="radio" name="colour" value="w"> White</label></li>
+          <li><label><input type="radio" name="colour" value="b"> Blue</label></li>
+        </ul>
+      </fieldset>
+      <fieldset  class="product_info">
+        <legend>Sizes</legend>
+        <ol>
+          <li><label><input type="radio" name="size" value="m"> M</label></li>
+          <li><label><input type="radio" name="size" value="l"> L</label></li>
+          <li><label><input type="radio" name="size" value="xl"> XL</label></li>
+        </ol>
+      </fieldset>
+    </form>
+    <footer class="product_footer">
+        <button style="font-size:10.5px"><i class="fa fa-shopping-cart"></i></button>
+        <button style="font-size:10.5px"><i class="fa fa-heart"></i></button>
+    </footer>
+  </article>
+
+  <!-- Product 6 -->
+  <article class="product">
+    <header>
+      <img src="img/prod-6.jpg" alt="Product Image">
+      <h3>Backpack</h3>
+      <data value="26"><del>$50.00</del> <ins>$39.00</ins></data>
+      <p>Here is a shot of this product ..</p>
+      <dl>
+        
+        <dd>4.4 <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_half</span></dd>
+      </dl>
+      <a href="#">see more</a>
+    </header>
+    <form>
+      <fieldset class="product_info">
+        <legend>Colours</legend>
+        <ul>
+          <li><label><input type="radio" name="colour" value="r"> Red</label></li>
+          <li><label><input type="radio" name="colour" value="w"> White</label></li>
+          <li><label><input type="radio" name="colour" value="b"> Blue</label></li>
+        </ul>
+      </fieldset>
+      <fieldset class="product_info">
+        <legend>Sizes</legend>
+        <ol>
+          <li><label><input type="radio" name="size" value="m"> M</label></li>
+          <li><label><input type="radio" name="size" value="l"> L</label></li>
+          <li><label><input type="radio" name="size" value="xl"> XL</label></li>
+        </ol>
+      </fieldset>
+    </form>
+    <footer class="product_footer">
+        <button style="font-size:10.5px"><i class="fa fa-shopping-cart"></i></button>
+        <button style="font-size:10.5px"><i class="fa fa-heart"></i></button>
+    </footer>
+  </article>
+</box>
+</section>
+
+<nav aria-label="Pagination" class="pagination">
+  <p>1-6 of 23 products found</p><br>
+  <ol class="pages">
+    <li><a href="#" aria-label="Current Page, Page 1" aria-current="true">1</a></li>
+    <li><a href="#" aria-label="Page 2">2</a></li>
+    <li><a href="#" aria-label="Page 3">3</a></li>
+    <li><a href="#" aria-label="Page 4">4</a></li>
+    <li><a href="#" aria-label="Page 5">5</a></li>
+  </ol>
+</nav>
+</main>
+
+
+
+
+
+
+
+
+<footer>
+    <div class="main-content">
+      <div class="left box">
+        
+        <div class="content">
+          
+          <div class="social">
+            <a href="#"><span class="fab fa-facebook-f"></span></a>
+            <a href="#"><span class="fab fa-twitter"></span></a>
+            <a href="#"><span class="fab fa-instagram"></span></a>
+            <a href="#"><span class="fab fa-youtube"></span></a>
+          </div>
+          
+
+        </div>
+      </div>
+
+      <div class="right box">
+        <div class="content">
+            
+          <div class="terms">
+            
+            <span class="text">Terms of Use</span>
+          
+          
+            
+            <span class="text">Privacy Policy</span>
+          
+          
+           
+            <span class="text">Accessibilty Policy</span>
+          </div>
+        </div>
+      </div>
+
+     
+   
+  </footer>
+
+  </body>
+</html>

@@ -1,0 +1,144 @@
+/* Note there a few "reset" styles given in reset.css. Review those before you begin */
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    color: #111;
+   
+    
+  } 
+ 
+  img {
+	max-width: 100%;
+	height: auto;
+	vertical-align: bottom;
+} 
+  
+  
+  .products h1{
+    text-align: center;
+    color: #111;
+  }
+
+ 
+  
+
+.filters{
+    font-size: 14px;
+    text-align: left; 
+    margin: 20px;
+    }
+.filters fieldset{
+    text-align: center;
+    width: 100%;
+    position:relative;
+    font-size: 11px;
+    padding: 5px;
+    display: flex;
+  justify-content: center;
+  
+}
+.filters li{
+   
+    display: inline;
+    list-style: none;
+}
+.results dd{
+    font-size: smaller;
+}
+.results{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, 20rem);
+    justify-content: center;
+}
+.results button{
+    display: inline-flexbox;
+    border: none;
+    padding: 1rem 2rem;
+    margin: ;
+    text-decoration: none;
+    background: white;
+    color: #000000;
+    font-family: sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+    text-align: center;
+    
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.results button:hover,
+button:focus {
+    background: rgb(230, 230, 230);
+}
+
+
+.product{
+   
+   
+    height: 60vh;
+    overflow: hidden;
+    box-shadow: 0px 2px 8px 0px var(--clr-gray-light);
+    background-color: white;
+    text-align: center;
+    border-radius: 1rem;
+    position: relative;
+    margin: 0.5rem;
+    
+}
+.product_info li{
+    
+    display: inline;
+   
+}
+.product_info{
+    font-size: 11px;
+}
+
+.product_footer{
+    margin:10px 0;
+}
+.product_footer button{
+    height: 28px;
+    font-size: 11px;
+    text-align: center;
+    padding-bottom: 20px;
+    
+}
+.filters{
+    font-size: 14px;
+    text-align: left; 
+    margin: 20px;
+    
+}
+.filters fieldset{
+    text-align: left;
+    width: 100%;
+    position:relative;
+    font-size: 15px;
+    padding: 5px;
+    display: flex;
+  justify-content: center;
+  
+}
+.filters li{
+   
+    display: inline;
+    list-style: none;
+}
+
+.subheading{
+    text-align: center;
+}
+.pagination{
+    background: #f2f2f2;
+    text-align: center;
+
+}
+
+.pagination li{
+    display: inline-block;
+    list-style: none;
+    text-align: center;
+}
