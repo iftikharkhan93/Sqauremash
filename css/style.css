@@ -8,13 +8,81 @@
     
   } 
  
+
   /* product images  */
   img {
 	max-width: 100%;
 	height: auto;
-	vertical-align: bottom;
+    vertical-align: bottom;
+    border-radius: 50%;
 } 
   
+
+/* The container for radio buttons */
+.container-radio {
+    display: inline;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  
+  /* Hide the browser's default radio button */
+  .container-radio input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  /* Create a custom radio button */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .container:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  
+  /* When the radio button is checked, add a blue background */
+  .container-radio input:checked ~ .checkmark {
+    background-color: #ff5050;
+  }
+  
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the indicator (dot/circle) when checked */
+  .container-radio input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the indicator (dot/circle) */
+  .container-radio .checkmark:after {
+       top: 9px;
+      left: 9px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: white;
+  }
+
   
   .products h1{
     text-align: center;
@@ -37,15 +105,79 @@
     font-size: 15px;
     padding: 5px;
     display: inline-block;
-  justify-content: left;
+    justify-content: left;
   
 }
-.filters li{
-   
-    display: inline;
-    list-style: none;
-}
 
+
+
+
+.container {
+    display: inline;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Hide the browser's default radio button */
+  .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  /* Create a custom radio button */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: rgb(75, 75, 75);
+    border-radius: 50%;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .container:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  
+  /* When the radio button is checked, add a blue background */
+  .container input:checked ~ .checkmark {
+    background-color: #ff5050;
+  }
+  
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the indicator (dot/circle) when checked */
+  .container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the indicator (dot/circle) */
+  .container .checkmark:after {
+       top: 9px;
+      left: 9px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: white;
+  }
+
+  .checked {
+    color: orange;
+  }
 
 /*  Results section */
 .results dd{
@@ -60,7 +192,7 @@
     display: inline-flexbox;
     border: none;
     padding: 1rem 2rem;
-    margin: ;
+    margin: 0;
     background: white;
     color: #000000;
     font-family: sans-serif;
@@ -77,11 +209,10 @@
 .product{
    
    
-    height: 60vh;
+    height: auto;
     overflow:hidden;
-    background-color: white;
+    background-color:f2f2f2;
     text-align: center;
-    border-radius: 1rem;
     position: relative;
     margin: 0.5rem;
     
@@ -93,14 +224,15 @@
 }
 .product_info{
     font-size: 12px;
+    justify-content: center;
 }
 
 .product_footer{
-    margin:15px 0;
+    margin:0 0;
 }
 .product_footer button{
     height: 28px;
-    font-size: 11px;
+    font-size: 12px;
     text-align: center;
     padding-bottom: 20px;
     

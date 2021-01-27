@@ -13,6 +13,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> <!-- Icons-->
+    <link rel="icon" type="image/png" href="img/favicon-shopping.png">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
   
 
@@ -96,55 +97,82 @@
   
 
 
+
   <div class="filter-options">
     <fieldset>
-      <legend><h3>Colour</h3></legend>
-      <ul class="filter-list">
-        <li><input type="checkbox" name="colour" value="black" id="black"> <label for="black">Black</label></li>
-        <li><input type="checkbox" name="colour" value="white" id="white"> <label for="white">White</label></li>
-        <li><input type="checkbox" name="colour" value="grey" id="grey"> <label for="grey">Grey</label></li>
-        <li><input type="checkbox" name="colour" value="red" id="red"> <label for="red">Red</label></li>
-        <li><input type="checkbox" name="colour" value="blue" id="blue"> <label for="blue">Blue</label></li>
-      </ul>
+      <legend><h3>Colours</h3></legend>
+      <label class="container">Red
+        <input type="checkbox" checked="checked">
+        <span class="checkmark"></span>
+      </label>
+      <label class="container">White
+        <input type="checkbox">
+        <span class="checkmark"></span>
+      </label>
+      <label class="container">Black
+        <input type="checkbox">
+        <span class="checkmark"></span>
+      </label>
+      <label class="container">Blue
+        <input type="checkbox">
+        <span class="checkmark"></span>
+      </label>
     </fieldset>
+    
     <fieldset>
       <legend><h3>Sizes</h3></legend>
-      <ol class="filter-list">
-        <li><input type="checkbox" name="size" value="xs" id="xs"> <label for="xs">XS</label></li>
-        <li><input type="checkbox" name="size" value="sm" id="sm"> <label for="sm">S</label></li>
-        <li><input type="checkbox" name="size" value="md" id="md"> <label for="md">M</label></li>
-        <li><input type="checkbox" name="size" value="lg" id="lg"> <label for="lg">L</label></li>
-        <li><input type="checkbox" name="size" value="xl" id="xl"> <label for="xl">XL</label></li>
-      </ol>
+      <label class="container">XS
+        <input type="checkbox" checked="checked">
+        <span class="checkmark"></span>
+      </label>
+      <label class="container">S
+        <input type="checkbox">
+        <span class="checkmark"></span>
+      </label>
+      <label class="container">M
+        <input type="checkbox">
+        <span class="checkmark"></span>
+      </label>
+      <label class="container">L
+        <input type="checkbox">
+        <span class="checkmark"></span>
+      </label>
+      <label class="container">XL
+        <input type="checkbox">
+        <span class="checkmark"></span>
+      </label>
     </fieldset>
     <fieldset>
       <legend><h3>Ratings (above)</h3></legend>
-      <ol class="filter-list">
-        <li>
-          <input type="radio" name="rating" value="4" id="aboveFour">
-          <label for="aboveFour">
-            <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_border</span>
-          </label>
-        </li>
-        <li>
-          <input type="radio" name="rating" value="3" id="aboveThree">
-          <label for="aboveThree">
-            <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_border</span><span class="material-icons">star_border</span>
-          </label>
-        </li>
-        <li>
-          <input type="radio" name="rating" value="2" id="aboveTwo">
-          <label for="aboveTwo">
-            <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_border</span><span class="material-icons">star_border</span><span class="material-icons">star_border</span>
-          </label>
-        </li>
-        <li>
-          <input type="radio" name="rating" value="1" id="aboveOne">
-          <label for="aboveOne">
-            <span class="material-icons">star</span><span class="material-icons">star_border</span><span class="material-icons">star_border</span><span class="material-icons">star_border</span><span class="material-icons">star_border</span>
-          </label>
-        </li>
-      </ol>
+      
+      <label class="container-radio"> 
+        <i class="fa fa-star" aria-hidden="true"></i>
+        <i class="fa fa-star" aria-hidden="true"></i>
+        <i class="fa fa-star" aria-hidden="true"></i>
+        <i class="fa fa-star" aria-hidden="true"></i> 
+        
+          <input type="radio" checked="checked" name="radio">
+          
+          <span class="checkmark"></span>
+        </label>
+        <label class="container-radio">
+        <i class="fa fa-star" aria-hidden="true"></i>
+        <i class="fa fa-star" aria-hidden="true"></i>
+        <i class="fa fa-star" aria-hidden="true"></i>
+          <input type="radio" name="radio">
+          <span class="checkmark"></span>
+        </label>
+        <label class="container-radio">
+        <i class="fa fa-star" aria-hidden="true"></i>
+        <i class="fa fa-star" aria-hidden="true"></i>
+          <input type="radio" name="radio">
+          <span class="checkmark"></span>
+        </label>
+        <label class="container-radio">
+        <i class="fa fa-star" aria-hidden="true"></i>
+          <input type="radio" name="radio">
+          <span class="checkmark"></span>
+        </label>
       
     </fieldset>
   </div>
