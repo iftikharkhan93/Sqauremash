@@ -15,7 +15,17 @@
 	height: auto;
     vertical-align: bottom;
     border-radius: 50%;
+    opacity: 1;
 }
+
+/* img:hover{
+    opacity: 0.5;
+    image-orientation: flip;
+} */
+
+
+
+
 
 
 /* The container for radio buttons */
