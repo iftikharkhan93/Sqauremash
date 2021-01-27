@@ -129,16 +129,17 @@
     justify-content:center;
 }
 .results button{
-    display: inline;
+    display:inline-table;
     border: none;
     padding: 1rem 2rem;
     margin: 0;
     background: white;
     color: #000000;
     font-family: sans-serif;
-    font-size: 1rem;
-    cursor: pointer;
+    font-size: 2rem;
+    cursor: pointer;;
     text-align: center;
+    border-radius: 10%;
 }
 
 .results button:hover{
@@ -185,10 +186,30 @@
     background: #f2f2f2;
     text-align: center;
     display: inline;
+    
+
+    
 
 }
+
+
 .pagination li{
     display: inline;
+    
+}
+
+.pagination a {
+  color: black;
+  float: center;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color .3s;
+  border-radius: 50%;
+} 
+
+.pagination a:hover{
+  background-color: #ff5050;
+
 }
 
 
