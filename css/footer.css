@@ -62,7 +62,7 @@ footer{
   line-height: 40px;
   text-align: center;
   font-size: 18px;
-  border-radius: 5px;
+  border-radius: 50%;
   transition: 0.3s;
 }
 

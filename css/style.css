@@ -197,6 +197,11 @@
     display: inline;
     
 }
+.pagination p{
+  text-decoration: underline;
+  padding-bottom: 10px;
+  letter-spacing: 0.1em;
+}
 
 .pagination a {
   color: black;
