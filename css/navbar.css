@@ -46,7 +46,7 @@ nav .nav-items li a{
   text-decoration: none;
 }
 nav .nav-items li a:hover{
-  color: #ff9f82;
+  color: rgb(255, 83, 83);
   
 }
 
@@ -244,3 +244,4 @@ nav .logo.space{
 .content .space{
   margin: 10px 0;
 }
+
