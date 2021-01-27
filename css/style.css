@@ -103,9 +103,9 @@
     width: 50%;
     position:relative;
     font-size: 15px;
-    padding: 5px;
+    padding: 2px;
     display: inline-block;
-    justify-content: left;
+    justify-content: center;
   
 }
 
