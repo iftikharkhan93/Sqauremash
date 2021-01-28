@@ -298,7 +298,9 @@
 .container-radio-prod {
     display: inline;
     position: relative;
-    padding-left: 35px;
+    padding-left: 30px;
+    padding-right: 20px;
+    padding-top: 2px;
     margin-bottom: 12px;
     cursor: pointer;
     font-size: 15px;
