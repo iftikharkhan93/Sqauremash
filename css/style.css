@@ -155,7 +155,8 @@
     text-align: center;
     position: relative;
     margin: 0.5rem;
-    border-radius: 10px;    
+    border-radius: 10px;
+    box-shadow: 0 0 0.5em rgba(110, 110, 110, 0.5);    
 }
 
 .product_info li{
@@ -361,4 +362,5 @@
       background: white;
   }
 
-
+  
+  
