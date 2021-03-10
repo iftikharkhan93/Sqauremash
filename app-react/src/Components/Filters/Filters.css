@@ -1,0 +1,191 @@
+#filters {
+  /* Hide the browser's default radio button */
+  /* Create a custom radio button */
+  /* On mouse-over, add a grey background color */
+  /* When the radio button is checked, add a blue background */
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  /* Show the indicator (dot/circle) when checked */
+  /* Style the indicator (dot/circle) */
+  /*  Filters  */
+  /* Hide the browser's default radio button */
+  /* Create a custom radio button */
+  /* On mouse-over, add a grey background color */
+  /* When the radio button is checked, add a blue background */
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  /* Show the indicator (dot/circle) when checked */
+  /* Style the indicator (dot/circle) */
+  /* The container for radio buttons for products */
+  /* Hide the browser's default radio button for products */
+  /* Create a custom radio button for products */
+  /* On mouse-over, add a grey background color */
+  /* When the radio button is checked, add a red background */
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  /* Show the indicator (dot/circle) when checked */
+  /* Style the indicator (dot/circle) */
+}
+#filters .container-radio {
+  display: inline;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+#filters .container-radio input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+#filters .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+#filters .container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+#filters .container-radio input:checked ~ .checkmark {
+  background-color: #ff5050;
+}
+#filters .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+#filters .container-radio input:checked ~ .checkmark:after {
+  display: block;
+}
+#filters .container-radio .checkmark:after {
+  top: 9px;
+  left: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+}
+#filters .products h1 {
+  text-align: center;
+  color: #111;
+}
+#filters .filters {
+  font-size: 15px;
+  text-align: center;
+  margin: 20px;
+}
+#filters .filters fieldset {
+  text-align: center;
+  width: 50%;
+  position: relative;
+  font-size: 15px;
+  padding: 2px;
+  display: inline-block;
+  justify-content: center;
+}
+#filters .container {
+  display: inline;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  padding-right: 5px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+#filters .container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+#filters .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #4b4b4b;
+  border-radius: 50%;
+}
+#filters .container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+#filters .container input:checked ~ .checkmark {
+  background-color: #ff5050;
+}
+#filters .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+#filters .container input:checked ~ .checkmark:after {
+  display: block;
+}
+#filters .container .checkmark:after {
+  top: 9px;
+  left: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+}
+#filters .container-radio-prod {
+  display: inline;
+  position: relative;
+  padding-left: 30px;
+  padding-right: 20px;
+  padding-top: 2px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 15px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+#filters .container-radio-prod input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+#filters .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 10px;
+  height: 25px;
+  width: 25px;
+  background-color: #4b4b4b;
+  border-radius: 50%;
+}
+#filters .container-radio-prod input ~ .checkmark {
+  background-color: #ccc;
+}
+#filters .container-radio-prod input:checked ~ .checkmark {
+  background-color: #ff5050;
+}
+#filters .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+#filters .container-radio-prod input:checked ~ .checkmark:after {
+  display: block;
+}
+#filters .container-radio-prod .checkmark:after {
+  top: 9px;
+  left: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+}

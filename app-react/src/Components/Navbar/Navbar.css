@@ -1,0 +1,280 @@
+#navbar {
+  /* Nav bar */
+}
+
+#navbar * {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+}
+
+#navbar nav {
+  background: #171c24;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+  padding: 0 100px;
+  position: relative;
+}
+
+#navbar nav .logo {
+  color: #fff;
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: -1px;
+}
+
+#navbar nav .logo:hover {
+  color: #ff5353;
+}
+
+#navbar nav .nav-items {
+  display: flex;
+  flex: 1;
+  padding: 0 0 0 40px;
+  list-style: none;
+}
+
+#navbar nav .nav-items li {
+  list-style: none;
+  padding: 0 15px;
+}
+
+#navbar nav .nav-items li a {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+#navbar nav .nav-items li a:hover {
+  color: #ff5353;
+}
+
+#navbar nav form {
+  display: flex;
+  height: 40px;
+  padding: 2px;
+  background: #1e232b;
+  min-width: 18% !important;
+  border-radius: 2px;
+  border: 1px solid rgba(175, 140, 140, 0.2);
+}
+
+#navbar nav form .search-data {
+  width: 100%;
+  height: 100%;
+  padding: 0 10px;
+  color: #fff;
+  font-size: 17px;
+  border: none;
+  font-weight: 500;
+  background: none;
+}
+
+#navbar nav form button {
+  padding: 0 15px;
+  color: #fff;
+  font-size: 17px;
+  background: #ff3d00;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+#navbar nav form button:hover {
+  background: #e63600;
+}
+
+#navbar nav .menu-icon,
+#navbar nav .cancel-icon,
+#navbar nav .search-icon {
+  width: 40px;
+  text-align: center;
+  margin: 0 50px;
+  font-size: 18px;
+  color: #fff;
+  cursor: pointer;
+  display: none;
+}
+
+#navbar nav .menu-icon span,
+#navbar nav .cancel-icon,
+#navbar nav .search-icon {
+  display: none;
+}
+
+@media (max-width: 1245px) {
+  #navbar nav {
+    padding: 0 50px;
+  }
+}
+
+@media (max-width: 1140px) {
+  #navbar nav {
+    padding: 0px;
+  }
+
+  #navbar nav .logo {
+    flex: 2;
+    text-align: center;
+  }
+
+  #navbar nav .nav-items {
+    position: fixed;
+    z-index: 99;
+    top: 70px;
+    width: 100%;
+    left: -114%;
+    height: 100%;
+    text-align: center;
+    background: #14181f;
+    display: inline-block;
+    transition: left 0.3s ease;
+  }
+
+  #navbar nav .nav-items.active {
+    left: 0px;
+  }
+
+  #navbar nav .nav-items li {
+    line-height: 40px;
+    margin: 30px 0;
+  }
+
+  #navbar nav .nav-items li a {
+    font-size: 20px;
+  }
+
+  #navbar nav form {
+    position: absolute;
+    top: 80px;
+    right: 50px;
+    opacity: 0;
+    pointer-events: none;
+    transition: top 0.3s ease, opacity 0.1s ease;
+  }
+
+  #navbar nav form.active {
+    top: 95px;
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  #navbar nav form:before {
+    position: absolute;
+    content: "";
+    top: -13px;
+    right: 0px;
+    width: 0;
+    height: 0;
+    z-index: -1;
+    border: 10px solid transparent;
+    border-bottom-color: #0062ff;
+    margin: -20px 0 0;
+  }
+
+  #navbar nav form:after {
+    position: absolute;
+    content: "";
+    height: 60px;
+    padding: 2px;
+    background: #1e232b;
+    border-radius: 2px;
+    min-width: calc(100% + 20px);
+    z-index: -2;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  #navbar nav .menu-icon {
+    display: block;
+  }
+
+  #navbar nav .search-icon,
+  #navbar nav .menu-icon span {
+    display: block;
+  }
+
+  #navbar nav .menu-icon span.hide,
+  #navbar nav .search-icon.hide {
+    display: none;
+  }
+
+  #navbar nav .cancel-icon.show {
+    display: block;
+  }
+}
+
+#navbar .content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+}
+
+#navbar .content header {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+#navbar .content .text {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+#navbar .space {
+  margin: 10px 0;
+}
+
+#navbar nav .logo.space {
+  color: red;
+  padding: 0 5px 0 0;
+}
+
+@media (max-width: 980px) {
+  #navbar nav .menu-icon,
+  #navbar nav .cancel-icon,
+  #navbar nav .search-icon {
+    margin: 0 20px;
+  }
+
+  #navbar nav form {
+    right: 30px;
+  }
+}
+
+@media (max-width: 350px) {
+  #navbar nav .menu-icon,
+  #navbar nav .cancel-icon,
+  #navbar nav .search-icon {
+    margin: 0 10px;
+    font-size: 16px;
+  }
+}
+
+#navbar .content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#navbar .content header {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+#navbar .content .text {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+#navbar .content .space {
+  margin: 10px 0;
+}

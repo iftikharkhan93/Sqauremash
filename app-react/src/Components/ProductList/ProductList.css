@@ -1,0 +1,343 @@
+#product-list {
+  /* product images  */
+  /* The container for radio buttons */
+  /* Hide the browser's default radio button */
+  /* Create a custom radio button */
+  /* On mouse-over, add a grey background color */
+  /* When the radio button is checked, add a blue background */
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  /* Show the indicator (dot/circle) when checked */
+  /* Style the indicator (dot/circle) */
+  /*  Filters  */
+  /*  Results section */
+  /*  Products */
+  /* page number */
+  /* Hide the browser's default radio button */
+  /* Create a custom radio button */
+  /* On mouse-over, add a grey background color */
+  /* When the radio button is checked, add a blue background */
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  /* Show the indicator (dot/circle) when checked */
+  /* Style the indicator (dot/circle) */
+  /* The container for radio buttons for products */
+  /* Hide the browser's default radio button for products */
+  /* Create a custom radio button for products */
+  /* On mouse-over, add a grey background color */
+  /* When the radio button is checked, add a red background */
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  /* Show the indicator (dot/circle) when checked */
+  /* Style the indicator (dot/circle) */
+  /* Preview each of these suggested resets before beginning your project styling */
+  /* These will make "User agent stylesheet" values (Chrome) available when needed, using classes */
+}
+#product-list img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+  border-radius: 50%;
+  opacity: 1;
+}
+#product-list .container-radio {
+  display: inline;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+#product-list .container-radio input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+#product-list .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+#product-list .container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+#product-list .container-radio input:checked ~ .checkmark {
+  background-color: #ff5050;
+}
+#product-list .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+#product-list .container-radio input:checked ~ .checkmark:after {
+  display: block;
+}
+#product-list .container-radio .checkmark:after {
+  top: 9px;
+  left: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+}
+#product-list .products h1 {
+  text-align: center;
+  color: #111;
+}
+#product-list .filters {
+  font-size: 15px;
+  text-align: center;
+  margin: 20px;
+}
+#product-list .filters fieldset {
+  text-align: center;
+  width: 50%;
+  position: relative;
+  font-size: 15px;
+  padding: 2px;
+  display: inline-block;
+  justify-content: center;
+}
+#product-list .results {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 25rem);
+  justify-content: center;
+}
+#product-list .results button {
+  display: inline-table;
+  border: none;
+  padding: 1rem 2rem;
+  margin: 0;
+  background: white;
+  color: #000000;
+  font-family: sans-serif;
+  font-size: 2rem;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 10%;
+}
+#product-list .results button:hover {
+  background: red;
+}
+#product-list .product {
+  height: auto;
+  width: auto;
+  overflow: hidden;
+  background-color: white;
+  text-align: center;
+  position: relative;
+  margin: 0.5rem;
+  border-radius: 10px;
+  box-shadow: 0 0 0.5em rgba(110, 110, 110, 0.5);
+}
+#product-list .product_info li {
+  display: inline;
+}
+#product-list .product_info {
+  font-size: 12px;
+  justify-content: center;
+}
+#product-list .product_footer {
+  margin: 0 0;
+  background-color: #f2f2f2;
+}
+#product-list .product_footer button {
+  height: 28px;
+  font-size: 20px;
+  text-align: center;
+  padding-bottom: 20px;
+  margin-right: 5px;
+}
+#product-list .product_footer button:focus {
+  outline: none;
+}
+#product-list .pagination {
+  background: #f2f2f2;
+  text-align: center;
+  display: inline;
+}
+#product-list .pagination li {
+  display: inline;
+}
+#product-list .pagination p {
+  text-decoration: underline;
+  padding-bottom: 10px;
+  letter-spacing: 0.1em;
+}
+#product-list .pagination a {
+  color: black;
+  float: center;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  border-radius: 50%;
+}
+#product-list .pagination a:hover {
+  background-color: #ff5050;
+}
+#product-list .container {
+  display: inline;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+#product-list .container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+#product-list .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #4b4b4b;
+  border-radius: 50%;
+}
+#product-list .container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+#product-list .container input:checked ~ .checkmark {
+  background-color: #ff5050;
+}
+#product-list .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+#product-list .container input:checked ~ .checkmark:after {
+  display: block;
+}
+#product-list .container .checkmark:after {
+  top: 9px;
+  left: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+}
+#product-list .container-radio-prod {
+  display: inline;
+  position: relative;
+  padding-left: 30px;
+  padding-right: 20px;
+  padding-top: 2px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 15px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+#product-list .container-radio-prod input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+#product-list .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #4b4b4b;
+  border-radius: 50%;
+}
+#product-list .container-radio-prod input ~ .checkmark {
+  background-color: #ccc;
+}
+#product-list .container-radio-prod input:checked ~ .checkmark {
+  background-color: #ff5050;
+}
+#product-list .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+#product-list .container-radio-prod input:checked ~ .checkmark:after {
+  display: block;
+}
+#product-list .container-radio-prod .checkmark:after {
+  top: 9px;
+  left: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+}
+#product-list ul,
+#product-list ol,
+#product-list dl {
+  list-style: none;
+  margin: 0 px;
+  padding: 0;
+}
+#product-list li > ul,
+#product-list li > ol {
+  padding-left: 2.5em;
+}
+#product-list input,
+#product-list button {
+  margin: 0;
+  font: inherit;
+}
+#product-list fieldset {
+  display: flex;
+  margin: 10;
+  padding: 0;
+}
+#product-list legend {
+  padding: 0;
+  border: none;
+  font-size: 15px;
+}
+#product-list ul.ul {
+  list-style-type: disc;
+}
+#product-list ol.ol {
+  list-style-type: decimal;
+}
+#product-list ul.ul,
+#product-list ol.ol {
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 2.5em;
+}
+#product-list fieldset.fieldset {
+  display: block;
+  margin-inline-start: 0.125em;
+  margin-inline-end: 0.125em;
+  padding-block-start: 0.35em;
+  padding-inline-start: 0.75em;
+  padding-inline-end: 0.75em;
+  padding-block-end: 0.625em;
+  min-inline-size: min-content;
+  border-width: 0.125em;
+  border-style: groove;
+  border-color: initial;
+  border-image: initial;
+}
+#product-list legend.legend {
+  display: block;
+  padding-inline-start: 0.125em;
+  padding-inline-end: 0.125em;
+  border-width: initial;
+  border-style: none;
+  border-color: initial;
+  border-image: initial;
+}
