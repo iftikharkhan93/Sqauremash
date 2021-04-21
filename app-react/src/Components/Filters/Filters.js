@@ -1,9 +1,31 @@
-import React from "react";
+import React, { useContext } from "react";
+import ProductContext, {
+  RatingContext,
+  SizeContext,
+  ColorContext,
+} from "../ContextAPI/Context";
 
 import "./Filters.css";
 const Filters = () => {
   const [colors, setColors] = React.useState(true);
   const [size, setSize] = React.useState(true);
+  const productData = useContext(ProductContext);
+  const ratingData = useContext(RatingContext);
+  const sizeData = useContext(SizeContext);
+  const colorData = useContext(ColorContext);
+
+  const handleChange = (e) => {
+    productData.setSortedValue(e.target.value);
+  };
+  const handleRating = (e) => {
+    ratingData.setRatingValue(e.target.value);
+  };
+  const handleSizes = (e) => {
+    sizeData.setSizeValue(e.target.value);
+  };
+  const handleColors = (e) => {
+    colorData.setColorValue(e.target.value);
+  };
   return (
     <div id="filters">
       <header className="heading">
@@ -19,38 +41,53 @@ const Filters = () => {
             <legend>
               <h3>Colours</h3>
             </legend>
-            <label className="container">
+            <label className="container-radio">
               Red
               <input
-                type="checkbox"
+                type="radio"
                 name="colors"
-                checked={colors}
-                onChange={() => setColors(!colors)}
+                value="red"
+                // onChange={() => setColors(!colors)}
+                onClick={handleColors}
               />
               <span className="checkmark"></span>
             </label>
-            <label className="container">
+            <label className="container-radio">
               White
-              <input type="checkbox" name="colors" />
+              <input
+                type="radio"
+                name="colors"
+                value="white"
+                onClick={handleColors}
+              />
               <span className="checkmark"></span>
             </label>
-            <label className="container">
+            <label className="container-radio">
               Black
-              <input type="checkbox" name="colors" />
+              <input
+                type="radio"
+                name="colors"
+                value="black"
+                onClick={handleColors}
+              />
               <span className="checkmark"></span>
             </label>
-            <label className="container">
+            <label className="container-radio">
               Blue
-              <input type="checkbox" name="colors" />
+              <input
+                type="radio"
+                name="colors"
+                value="blue"
+                onClick={handleColors}
+              />
               <span className="checkmark"></span>
             </label>
           </fieldset>
-
           <fieldset>
             <legend>
               <h3>Sizes</h3>
             </legend>
-            <label className="container">
+            {/* <label className="container">
               XS
               <input
                 type="checkbox"
@@ -58,27 +95,42 @@ const Filters = () => {
                 onChange={() => setSize(!size)}
               />
               <span className="checkmark"></span>
-            </label>
-            <label className="container">
+            </label> */}
+            <label className="container-radio">
               S
-              <input type="checkbox" />
+              <input
+                type="radio"
+                value="s"
+                name="radio1"
+                onClick={handleSizes}
+              />
               <span className="checkmark"></span>
             </label>
-            <label className="container">
+            <label className="container-radio">
               M
-              <input type="checkbox" />
+              <input
+                type="radio"
+                value="m"
+                name="radio1"
+                onClick={handleSizes}
+              />
               <span className="checkmark"></span>
             </label>
-            <label className="container">
+            <label className="container-radio">
               L
-              <input type="checkbox" />
+              <input
+                type="radio"
+                value="l"
+                name="radio1"
+                onClick={handleSizes}
+              />
               <span className="checkmark"></span>
             </label>
-            <label className="container">
+            {/* <label className="container">
               XL
               <input type="checkbox" />
               <span className="checkmark"></span>
-            </label>
+            </label> */}
           </fieldset>
           <fieldset>
             <legend>
@@ -91,7 +143,12 @@ const Filters = () => {
               <i className="fa fa-star" aria-hidden="true"></i>
               <i className="fa fa-star" aria-hidden="true"></i>
 
-              <input type="radio" name="radio" />
+              <input
+                type="radio"
+                name="radio"
+                value="4"
+                onChange={handleRating}
+              />
 
               <span className="checkmark"></span>
             </label>
@@ -99,18 +156,33 @@ const Filters = () => {
               <i className="fa fa-star" aria-hidden="true"></i>
               <i className="fa fa-star" aria-hidden="true"></i>
               <i className="fa fa-star" aria-hidden="true"></i>
-              <input type="radio" name="radio" />
+              <input
+                type="radio"
+                name="radio"
+                value="3"
+                onChange={handleRating}
+              />
               <span className="checkmark"></span>
             </label>
             <label className="container-radio">
               <i className="fa fa-star" aria-hidden="true"></i>
               <i className="fa fa-star" aria-hidden="true"></i>
-              <input type="radio" name="radio" />
+              <input
+                type="radio"
+                name="radio"
+                value="2"
+                onChange={handleRating}
+              />
               <span className="checkmark"></span>
             </label>
             <label className="container-radio">
               <i className="fa fa-star" aria-hidden="true"></i>
-              <input type="radio" name="radio" />
+              <input
+                type="radio"
+                name="radio"
+                value="1"
+                onChange={handleRating}
+              />
               <span className="checkmark"></span>
             </label>
           </fieldset>
@@ -119,11 +191,11 @@ const Filters = () => {
           <legend>
             <h3>Sort By</h3>
           </legend>
-          <select name="sort" id="sort">
-            <option value="price-high">Featured</option>
-            <option value="price-high">Highest to Lowest</option>
-            <option value="price-low">Lowest to Highest</option>
-            <option value="newest">Newest releases</option>
+          <select name="sort" id="sort" onChange={handleChange}>
+            <option value="1">Featured</option>
+            <option value="2">Highest to Lowest</option>
+            <option value="3">Lowest to Highest</option>
+            <option value="4">Newest releases</option>
           </select>
         </fieldset>
       </form>

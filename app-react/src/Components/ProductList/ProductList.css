@@ -137,6 +137,7 @@
 }
 #product-list .product_info li {
   display: inline;
+  cursor: pointer;
 }
 #product-list .product_info {
   font-size: 12px;
@@ -169,15 +170,16 @@
   padding-bottom: 10px;
   letter-spacing: 0.1em;
 }
-#product-list .pagination a {
+#product-list .pagination li {
   color: black;
   float: center;
   padding: 8px 16px;
+  cursor: pointer;
   text-decoration: none;
   transition: background-color 0.3s;
   border-radius: 50%;
 }
-#product-list .pagination a:hover {
+#product-list .pagination li:hover {
   background-color: #ff5050;
 }
 #product-list .container {

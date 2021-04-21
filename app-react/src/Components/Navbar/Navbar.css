@@ -22,6 +22,7 @@
 
 #navbar nav .logo {
   color: #fff;
+  cursor: pointer;
   font-size: 30px;
   font-weight: 600;
   letter-spacing: -1px;
@@ -38,7 +39,7 @@
   list-style: none;
 }
 
-#navbar nav .nav-items li {
+#navbar nav .nav-items li a {
   list-style: none;
   padding: 0 15px;
 }
@@ -52,6 +53,22 @@
 
 #navbar nav .nav-items li a:hover {
   color: #ff5353;
+}
+#navbar nav li.itemCount {
+  height: 35px;
+  width: 35px;
+  color: white;
+  background: #ff3d00;
+  border-radius: 20px;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+}
+#navbar nav li.itemCount a {
+  color: white;
+  text-decoration: none;
 }
 
 #navbar nav form {
