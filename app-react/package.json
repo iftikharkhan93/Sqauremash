@@ -8,6 +8,7 @@
     "@testing-library/user-event": "^12.1.10",
     "css-loader": "^5.1.1",
     "firebase": "^8.3.2",
+    "netlify-cli": "^3.21.2",
     "node-sass": "4.14.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
