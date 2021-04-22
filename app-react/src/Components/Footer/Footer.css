@@ -17,6 +17,8 @@
   bottom: 0px;
   width: 100%;
   background: #111;
+  position: fixed;
+  left: 0;
 }
 
 #footer .main-content {

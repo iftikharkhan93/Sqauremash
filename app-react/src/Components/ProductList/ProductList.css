@@ -1,4 +1,5 @@
 #product-list {
+  padding-bottom: 100px;
   /* product images  */
   /* The container for radio buttons */
   /* Hide the browser's default radio button */
@@ -158,6 +159,7 @@
   outline: none;
 }
 #product-list .pagination {
+  padding-top: 100px;
   background: #f2f2f2;
   text-align: center;
   display: inline;
@@ -178,6 +180,10 @@
   text-decoration: none;
   transition: background-color 0.3s;
   border-radius: 50%;
+}
+
+#product-list .pagination .pages {
+  padding-top: 20px;
 }
 #product-list .pagination li:hover {
   background-color: #ff5050;

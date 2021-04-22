@@ -10,10 +10,10 @@ import ProductContext, {
 const MyProvider = (props) => {
   const [sortedValue, setSortedValue] = useState(1);
   const [cartValue, setCartValue] = useState(0);
-  const [ratingValue, setRatingValue] = useState(0);
-  const [sizeValue, setSizeValue] = useState();
-  const [colorValue, setColorValue] = useState();
-  const [searchValue, setSearchValue] = useState();
+  const [ratingValue, setRatingValue] = useState("");
+  const [sizeValue, setSizeValue] = useState("");
+  const [colorValue, setColorValue] = useState("");
+  const [searchValue, setSearchValue] = useState("");
 
   return (
     <>

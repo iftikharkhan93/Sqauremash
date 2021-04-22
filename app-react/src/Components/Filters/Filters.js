@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import ProductContext, {
   RatingContext,
   SizeContext,
@@ -7,13 +7,12 @@ import ProductContext, {
 
 import "./Filters.css";
 const Filters = () => {
-  const [colors, setColors] = React.useState(true);
-  const [size, setSize] = React.useState(true);
   const productData = useContext(ProductContext);
   const ratingData = useContext(RatingContext);
   const sizeData = useContext(SizeContext);
   const colorData = useContext(ColorContext);
 
+  useEffect(() => {}, [ratingData.ratingValue]);
   const handleChange = (e) => {
     productData.setSortedValue(e.target.value);
   };
@@ -47,6 +46,7 @@ const Filters = () => {
                 type="radio"
                 name="colors"
                 value="red"
+                checked={colorData.colorValue === "red" ? true : false}
                 // onChange={() => setColors(!colors)}
                 onClick={handleColors}
               />
@@ -58,6 +58,7 @@ const Filters = () => {
                 type="radio"
                 name="colors"
                 value="white"
+                checked={colorData.colorValue === "white" ? true : false}
                 onClick={handleColors}
               />
               <span className="checkmark"></span>
@@ -68,6 +69,7 @@ const Filters = () => {
                 type="radio"
                 name="colors"
                 value="black"
+                checked={colorData.colorValue === "black" ? true : false}
                 onClick={handleColors}
               />
               <span className="checkmark"></span>
@@ -78,6 +80,7 @@ const Filters = () => {
                 type="radio"
                 name="colors"
                 value="blue"
+                checked={colorData.colorValue === "blue" ? true : false}
                 onClick={handleColors}
               />
               <span className="checkmark"></span>
@@ -102,6 +105,7 @@ const Filters = () => {
                 type="radio"
                 value="s"
                 name="radio1"
+                checked={sizeData.sizeValue === "s" ? true : false}
                 onClick={handleSizes}
               />
               <span className="checkmark"></span>
@@ -112,6 +116,7 @@ const Filters = () => {
                 type="radio"
                 value="m"
                 name="radio1"
+                checked={sizeData.sizeValue === "m" ? true : false}
                 onClick={handleSizes}
               />
               <span className="checkmark"></span>
@@ -122,6 +127,7 @@ const Filters = () => {
                 type="radio"
                 value="l"
                 name="radio1"
+                checked={sizeData.sizeValue === "l" ? true : false}
                 onClick={handleSizes}
               />
               <span className="checkmark"></span>
@@ -147,6 +153,7 @@ const Filters = () => {
                 type="radio"
                 name="radio"
                 value="4"
+                checked={ratingData.ratingValue === "4" ? true : false}
                 onChange={handleRating}
               />
 
@@ -160,6 +167,7 @@ const Filters = () => {
                 type="radio"
                 name="radio"
                 value="3"
+                checked={ratingData.ratingValue === "3" ? true : false}
                 onChange={handleRating}
               />
               <span className="checkmark"></span>
@@ -171,6 +179,7 @@ const Filters = () => {
                 type="radio"
                 name="radio"
                 value="2"
+                checked={ratingData.ratingValue === "2" ? true : false}
                 onChange={handleRating}
               />
               <span className="checkmark"></span>
@@ -181,6 +190,7 @@ const Filters = () => {
                 type="radio"
                 name="radio"
                 value="1"
+                checked={ratingData.ratingValue === "1" ? true : false}
                 onChange={handleRating}
               />
               <span className="checkmark"></span>
@@ -191,7 +201,12 @@ const Filters = () => {
           <legend>
             <h3>Sort By</h3>
           </legend>
-          <select name="sort" id="sort" onChange={handleChange}>
+          <select
+            name="sort"
+            value={productData.sortedValue}
+            id="sort"
+            onChange={handleChange}
+          >
             <option value="1">Featured</option>
             <option value="2">Highest to Lowest</option>
             <option value="3">Lowest to Highest</option>
