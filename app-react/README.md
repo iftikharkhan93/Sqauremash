@@ -37,7 +37,7 @@ This is a user friendly e-commerce website.
 4) Runs the app in the development mode
 5) Browser will open [http://localhost:3000](http://localhost:3000)
 
-#URL
+# URL
 https://squaremash.netlify.app/
 
 
